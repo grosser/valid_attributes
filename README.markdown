@@ -26,4 +26,4 @@ USAGE
  
 CONTRIBUTORS
 ============
-assert_invalid: http://www.railsforum.com/viewtopic.php?id=741
+[assert_invalid](http://www.railsforum.com/viewtopic.php?id=741)
