@@ -27,7 +27,7 @@ Example:
  
 USAGE
 =====
- - `assert_invalid_attributes(User,:email=>[nil,'s','@','asd@sdf'],:name=>[nil,'x','admin'])`
+ - `assert_invalid_attributes(User, :email=>[nil,'s','@','asd@sdf'], :name=>[nil,'x','admin'])`
  - set of valid attributes: `valid_attributes User`
  - a valid Record(new): `valid User`
  - a valid saved Record: `create_valid User`
