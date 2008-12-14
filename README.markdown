@@ -1,5 +1,6 @@
 GOALS
 =====
+ - simple and robust validation testing
  - create single valid record
  - edge-case records without fixtures
  - valid attributes to test a post or fill a form
@@ -14,16 +15,18 @@ Example:
       name: Hans
       login: hand
       address_id: 1
-  
+      #can be attr_protected/not attr_accessible
+
  
 USAGE
 =====
- - set of valid attributes: valid_attributes User
- - a valid Record(new): valid User
- - a valid saved Record: create_valid User
- - an edge-case User: valid User, :name=>'oh noo it is too long'
+ - `assert_invalid_attributes(User,:email=>[nil,'s','@','asd@sdf'],:name=>[nil,'x','admin'])`
+ - set of valid attributes: `valid_attributes User`
+ - a valid Record(new): `valid User`
+ - a valid saved Record: `create_valid User`
+ - an edge-case User: `valid User, :name=>'oh noo it is too long'`
 
  
 CONTRIBUTORS
 ============
-[assert_invalid](http://www.railsforum.com/viewtopic.php?id=741)
+[`assert_invalid`](http://www.railsforum.com/viewtopic.php?id=741)
