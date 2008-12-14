@@ -1,21 +1,28 @@
-GOALS
-=====
- - simple and robust validation testing
- - create single valid record
- - edge-case records without fixtures
- - valid attributes to test a post or fill a form
+PROBLEM
+=======
+ - fixtures are not maintainable
+ - validation change, code breaks
+ - forms need to be filled with valid attributes
+
+
+SOLUTION
+========
+ - simple and robust validation testing `User.email expected to be invalid when set to <xx@yy>`
+ - create a valid record without fixtures
+ - create edge-case records without fixtures
+ - use valid attributes to test a post or fill a form
 
 
 INSTALL
 =======
 Fill the test/fixtures/valid/valid.yml with 1 valid set of attributes per model
+(can be attr_protected/not attr_accessible)
 Example:
 
     user:
       name: Hans
       login: hand
       address_id: 1
-      #can be attr_protected/not attr_accessible
 
  
 USAGE
