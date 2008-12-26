@@ -1,12 +1,13 @@
 PROBLEM
 =======
  - fixtures are not maintainable
- - validation change, code breaks
+ - validation change, tests/code breaks
  - forms need to be filled with valid attributes
 
 
 SOLUTION
 ========
+(for RSpec and Test::Unit)
  - simple and robust validation testing `User.email expected to be invalid when set to <xx@yy>`
  - create a valid record without fixtures
  - create edge-case records without fixtures
@@ -15,8 +16,8 @@ SOLUTION
 
 INSTALL
 =======
-Fill the test/fixtures/valid/valid.yml with 1 valid set of attributes per model
-(can be attr_protected/not attr_accessible)
+Fill the test/valid_attributes.yml with 1 valid set of attributes per model
+(can be attr_protected or not-attr_accessible)
 Example:
 
     user:
@@ -24,7 +25,18 @@ Example:
       login: hand
       address_id: 1
 
- 
+When using Rspec: add to `spec/spec_helper.rb`:
+
+    Spec::Runner.configure do |config|
+      ...
+      config.include(ValidAttributes)
+      ...
+    end
+
+When using `Test::Unit`: add to `test/test_helper.rb`
+
+    include ValidAttributes
+
 USAGE
 =====
  - `assert_invalid_attributes(User, :email=>[nil,'s','@','asd@sdf'], :name=>[nil,'x','admin'])`
