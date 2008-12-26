@@ -41,10 +41,13 @@ USAGE
  - `assert_invalid_attributes(User, :email=>[nil,'s','@','asd@sdf'], :name=>[nil,'x','admin'])`
  - set of valid attributes: `valid_attributes User`
  - a valid Record(new): `valid User`
- - a valid saved Record: `create_valid User`
+ - a valid Record(saved): `create_valid User`
  - an edge-case User: `valid User, :name=>'oh noo it is too long'`
 
  
-CONTRIBUTORS
-============
-[`assert_invalid`](http://www.railsforum.com/viewtopic.php?id=741)
+AUTHOR
+======
+Michael Grosser
+grosser.michael@gmail.com
+Hereby placed under public domain, do what you want, just do not hold me accountable...
+[Original `assert_invalid`](http://www.railsforum.com/viewtopic.php?id=741)
