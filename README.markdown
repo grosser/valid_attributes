@@ -48,6 +48,6 @@ USAGE
 AUTHOR
 ======
 Michael Grosser  
-grosser.michael@gmail.com
+grosser.michael@gmail.com  
 Hereby placed under public domain, do what you want, just do not hold me accountable...  
 [Original `assert_invalid`](http://www.railsforum.com/viewtopic.php?id=741)
