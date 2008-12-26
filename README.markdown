@@ -7,7 +7,6 @@ PROBLEM
 
 SOLUTION
 ========
-(for RSpec and Test::Unit)
  - simple and robust validation testing `User.email expected to be invalid when set to <xx@yy>`
  - create a valid record without fixtures
  - create edge-case records without fixtures
@@ -16,8 +15,8 @@ SOLUTION
 
 INSTALL
 =======
-Fill the test/valid_attributes.yml with 1 valid set of attributes per model
-(can be attr_protected or not-attr_accessible)
+Fill the `test/valid_attributes.yml` with 1 valid set of attributes per model
+(can be `attr_protected` or not-`attr_accessible`)
 Example:
 
     user:
