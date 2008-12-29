@@ -17,8 +17,8 @@ INSTALL
 =======
 `script/plugin install git://github.com/grosser/valid_attributes.git`
 
-Fill the `test/valid_attributes.yml` with 1 valid set of attributes per model
-(can be `attr_protected` or not-`attr_accessible`)
+Fill the `test/valid_attributes.yml` with 1 valid set of attributes per model  
+(can be `attr_protected` or not-`attr_accessible`)  
 Example:
 
     user:
