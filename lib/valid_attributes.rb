@@ -56,6 +56,9 @@ class ValidAttributesHelper
   end
 
   def self.path_to_valid_yml
-    File.join(RAILS_ROOT,'test','valid_attributes.yml')
+    %w[test spec].each do |folder|
+      file = File.join(RAILS_ROOT,'test','valid_attributes.yml')
+      return file if File.exist?(file)
+    end
   end
 end
