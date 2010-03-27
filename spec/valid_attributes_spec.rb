@@ -1,7 +1,7 @@
-require File.expand_path("spec_helper", File.dirname(__FILE__))
+require "spec/spec_helper"
 
-VALID_ATTRIBUTES_YML = File.join(File.dirname(__FILE__),'valid_attributes.yml')
-ValidAttributesHelper.stored_valid_attributes = YAML.load(IO.read(VALID_ATTRIBUTES_YML))
+VALID_ATTRIBUTES_YML = 'spec/valid_attributes.yml'
+ValidAttributesHelper.stored_valid_attributes = YAML.load(File.read(VALID_ATTRIBUTES_YML))
 
 describe ValidAttributes do
   include ValidAttributes

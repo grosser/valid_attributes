@@ -1,25 +1,15 @@
-PROBLEM
-=======
- - fixtures are not maintainable
- - validation change, tests/code breaks
- - forms need to be filled with valid attributes
-
-
-SOLUTION
-========
- - simple and robust validation testing `User.email expected to be invalid when set to <xx@yy>`
- - create a valid record without fixtures
- - create edge-case records without fixtures
- - use valid attributes to test a post or fill a form
-
+ - validation testing `User.email expected to be invalid when set to <xx@yy>`
+ - valid attributes to test a controller :post or fill a form (integration tests / cucumber)
+ - create a valid record
+ - create edge-case records
+ - fixture replacement
+ - guards non-model test-code from validation changes
 
 INSTALL
 =======
-`script/plugin install git://github.com/grosser/valid_attributes.git`
+    script/plugin install git://github.com/grosser/valid_attributes.git
 
-Fill the `test/valid_attributes.yml` with 1 valid set of attributes per model  
-(can be `attr_protected` or not-`attr_accessible`)  
-Example:
+Fill `test/valid_attributes.yml` (or spec) with 1 valid set of attributes per model
 
     user:
       name: Hans
@@ -40,7 +30,7 @@ When using `Test::Unit`: add to `test/test_helper.rb`
 
 USAGE
 =====
- - `assert_invalid_attributes(User, :email=>[nil,'s','@','asd@sdf'], :name=>[nil,'x','admin'])`
+ - `assert_invalid_attributes(User, :email => [nil, 's', '@', 'asd@sdf'], :name => [nil, 'x', 'admin'])`
  - set of valid attributes: `valid_attributes User`
  - a valid Record(new): `valid User`
  - a valid Record(saved): `create_valid User`
