@@ -36,7 +36,11 @@ Fill `test/valid_attributes.yml` or `spec/valid_attributes.yml` with 1 valid set
 
 USAGE
 =====
- - `assert_invalid_attributes(User, :email => [nil, 's', '@', 'asd@sdf'], :name => [nil, 'x', 'admin'])`
+    def test_validations
+      assert true, valid(User).valid?
+      assert_invalid_attributes(User, :email => [nil, 's', '@', 'asd@sdf'], :name => [nil, 'x', 'admin'])`
+    end
+
  - set of valid attributes: `valid_attributes User`
  - a valid Record(new): `valid User`
  - a valid Record(saved): `create_valid User`
